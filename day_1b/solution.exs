@@ -1,4 +1,4 @@
-defmodule ElfCalorieCounter do
+defmodule MaxThreeElfCalorieCounter do
   def scan(input_file) do
     File.stream!(input_file)
     |> Enum.reduce([], &scan_line/2)
@@ -22,4 +22,4 @@ defmodule ElfCalorieCounter do
   end
 end
 
-ElfCalorieCounter.scan("input.txt") |> IO.puts()
+MaxThreeElfCalorieCounter.scan("input.txt") |> IO.puts()
