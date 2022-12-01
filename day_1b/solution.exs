@@ -17,7 +17,7 @@ defmodule MaxThreeElfCalorieCounter do
 
   defp choose(candidates) do
     candidates
-    |> Enum.sort_by(& &1, :desc)
+    |> Enum.sort_by(fn x -> x end, :desc)
     |> Enum.slice(0, 3)
   end
 end
